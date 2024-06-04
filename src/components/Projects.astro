@@ -4,6 +4,8 @@ import TailwindCss from './icons/TailWindCss.astro'
 import HTML from './icons/HTML.astro'
 import CSS from './icons/CSS.astro'
 import JavaScript from './icons/JavaScript.astro'
+import LinkIc from './icons/Link.astro'
+import Github2Ic from './icons/Github2.astro'
 
 const TAGS = {
     ASTRO: {
@@ -42,9 +44,10 @@ const TAGS = {
 const PROJECTS = [
     {
         title: "Área Legal Ideart Asesores",
-        description: " La página web del área legal de Ideart Asesores, donde se pueden visualizar los integrantes y las áreas de práctica ",
-        image: "/projects/ImgProyArLe.webp",
-        link: "https://imgflip.com/i/8s9mbs",
+        description: " La página web del área legal de Ideart Asesores, donde se pueden visualizar los integrantes y las áreas de práctica. ",
+        image: "/projects/ImgProyArLeV2.webp",
+        link: "https://dancing-stardust-a3f866.netlify.app/",
+        github: "https://github.com/Josereyes12/AreaLegalIdeart",
         tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT]
     }
 ]
@@ -52,7 +55,7 @@ const PROJECTS = [
 {
     <article class="mb-8">
   {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <>
         <h3 class="text-2xl font-semibold text-orange-500 mb-2">{title}</h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -67,9 +70,17 @@ const PROJECTS = [
           ))}
         </ul>
         <a href={link} target="_blank">
-          <img class="rounded shadow-2xl shadow-white/10 w-full md:w-auto" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+        <img class="rounded shadow-2xl shadow-white/10 w-full md:w-auto" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
         </a>
-      </>
+        <div class="flex justify-center mt-4 gap-4">
+        <a href={link} target="_blank" class="inline-flex items-center justify-center gap-2 px-3 py-2 text-base text-white transition bg-gray-800 border border-gray-600 rounded-xl hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+          <LinkIc class="size-6 mr-2" /> Ver Proyecto
+        </a>
+        <a href={github} target="_blank" class="inline-flex items-center justify-center gap-2 px-3 py-2 text-base text-white transition bg-gray-800 border border-gray-600 rounded-xl hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+          <Github2Ic class="size-6 mr-2" /> GitHub
+        </a>
+      </div>
+    </>
     ))
   }
 </article>
