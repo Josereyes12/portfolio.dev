@@ -10,6 +10,7 @@ import SectionContainer from '../components/SectionContainer.astro'
 import MaletaIcon from '../components/icons/Maleta.astro'
 import CodeIcon from '../components/icons/Code.astro'
 import Projects from '../components/Projects.astro'
+import Frase from '../components/Frase.astro'
 
 ---
 
@@ -18,7 +19,7 @@ import Projects from '../components/Projects.astro'
  description="Contrata a Jose Reyes para crear tu aplicación web o móvil. Desarrollador Web.">
 	<main class="px-4 mx-auto max-w-7xl">
 		<SectionContainer class = "py-28">
-			<img class="rounded-full size-24 mb-4 mx-auto" 
+			<img class="rounded-full size-24 mb-6 mx-auto" 
 			 src = "images/Yo.png"
 			 alt = " foto" />
 
@@ -56,9 +57,9 @@ import Projects from '../components/Projects.astro'
 					jose98pl@gmail.com
 				</SocialPill>
 			</nav>
-		</section>	
+		</SectionContainer>	
 		
-		<SectionContainer id="experiencia" class="py-32 mx-auto">
+		<SectionContainer id="experiencia" class="py-24 mx-auto">
 
 			<h2 class="text-3xl font-semibold mb-12 flex gap-x-3 items-center">
 				<MaletaIcon class = "size-8"/>
@@ -68,7 +69,7 @@ import Projects from '../components/Projects.astro'
 			<Experience/>
 		</SectionContainer>
 
-		<SectionContainer id="proyectos" class=" py-12 mx-auto">
+		<SectionContainer id="proyectos" class=" py-8 mx-auto">
 
 			<h2 class="text-3xl font-semibold mb-12 flex gap-x-3 items-center">
 				<CodeIcon class = "size-8"/>
@@ -77,5 +78,19 @@ import Projects from '../components/Projects.astro'
 
 			<Projects/>
 		</SectionContainer>
+
+		<SectionContainer >
+			
+			<h2 class="text-3xl font-semibold mb-12 flex flex-col items-center justify-center text-center text-orange-500/90 relative">	
+				Gracias por visitar la página, que pase un gran día
+			</h2>
+			
+			</h2>
+			<img class=" size-80 mb-6 mx-auto w-auto" 
+			 src = "images/Yo2.jpg"
+			 alt = " foto2" />
+			<Frase/>
+		</SectionContainer>
+		 
 	</main>
 </Layout>
